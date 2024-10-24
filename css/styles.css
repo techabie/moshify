@@ -4,6 +4,8 @@
   --color-accent: #ff3400;
   --color-headings: #1b0960;
   --color-body: #918ca4;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 /* must set the universal selector, before, after pseudo element, to select all elements
 to have border-box, without this, the width that set to 100% of the <a> button would fill more its container.
@@ -224,8 +226,8 @@ a {
 
 /* Inputs */
 .input {
-  border-radius: 30px;
-  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
   color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
@@ -235,7 +237,20 @@ a {
   font-size: 1.5rem;
   color: #cdcbd7;
 }
-
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+.input-group .input {
+  border: 0;
+  /* the flex-grow would make the input take the most part */
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+.input-group .btn {
+  margin: 4px;
+}
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
