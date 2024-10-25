@@ -334,3 +334,22 @@ a {
     font-size: 1.7rem;
   }
 }
+
+/* Media  */
+
+.media {
+  display: flex;
+}
+
+.media__title {
+  margin-top: 0;
+}
+.media__body {
+  margin: 0 2rem;
+}
+.media__image {
+  margin-top: 1rem;
+}
+/* we don't want to change the font size and color background of the media object 
+because we only need the basic structure. we can always change it when we implement the page
+. we might put media object in a white background color in future.  */
