@@ -401,3 +401,13 @@ because we only need the basic structure. we can always change it when we implem
     font-size: 1.6rem;
   }
 }
+
+/* Grid */
+.grid {
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
