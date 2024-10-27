@@ -161,7 +161,16 @@ a {
   justify-content: center;
   align-items: center;
 }
-
+.icon-container--accent {
+  background: var(--color-accent);
+}
+.icon--white {
+  fill: #fff;
+}
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
 /* Buttons */
 .btn {
   border-radius: 40px;
@@ -280,6 +289,12 @@ a {
 }
 .card--secondary .badge--secondary {
   background: #02cdf1;
+}
+
+/* this skin of the card component will prevent the red quote icon of the testimonial
+from missing the right side  */
+.card--testimonial {
+  overflow: visible;
 }
 
 /* Plan */
@@ -409,5 +424,32 @@ because we only need the basic structure. we can always change it when we implem
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Testimonials */
+.testimonial {
+  padding: 3rem;
+}
+.testimonial__image {
+  position: relative;
+}
+.testimonial__image > img {
+  width: 100%;
+}
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+.card .testimonial {
+}
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+  .testimonial .quote {
+    margin-left: 6rem;
   }
 }
