@@ -216,6 +216,11 @@ a {
 /* 1/ to make button and <a> fill the width of its container, use width: 100%.
       2/ <a> is an inline element, but width and height prop doesn't have affect to an inline element=> 
         to fix that change to inline-block  */
+
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
 .btn--block {
   width: 100%;
   display: inline-block;
@@ -442,8 +447,7 @@ because we only need the basic structure. we can always change it when we implem
   top: 3rem;
   right: -32px;
 }
-.card .testimonial {
-}
+
 @media screen and (min-width: 768px) {
   .testimonial .quote,
   .testimonial .quote__author {
@@ -451,5 +455,40 @@ because we only need the basic structure. we can always change it when we implem
   }
   .testimonial .quote {
     margin-left: 6rem;
+  }
+}
+
+/* Callouts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+.callout--primary {
+  background: var(--color-primary);
+  color: white;
+}
+.callout__heading {
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
+}
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+  .callout__content {
+    text-align: left;
+  }
+  .callout .btn {
+    justify-self: start;
+    margin-left: 2rem;
   }
 }
