@@ -508,6 +508,7 @@ because we only need the basic structure. we can always change it when we implem
   transition: transform 0.3s;
 }
 .collapsible__content {
+  /* the max-height set to 0 to get the transition when the collapsible expanded by a click */
   max-height: 0;
   overflow: hidden;
   /* to get the transition looks smoother, use opacity */
@@ -524,4 +525,45 @@ because we only need the basic structure. we can always change it when we implem
   viewport according to its size, not taking up all viewport.  */
   max-height: 100vh;
   opacity: 1;
+}
+
+/* Blocks */
+
+.block {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+}
+.block__header {
+  text-align: center;
+}
+.block__heading {
+  margin-top: 0;
+}
+.block--dark {
+  background: black;
+  color: #7b858b;
+}
+.block--dark .block__heading {
+  color: #fff;
+}
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical)+ 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+/* this class can be reuse anywhere in webpage. 
+It's to make sure the content of the block doesn't stretch too wide,
+otherwise it's hard to read on wide screen.
+Notice that .container is used differently in .block--dark no dark,
+for block--dark, we have to wrap its content inside a div.container
+because we want the black background to stretch but not the content
+*/
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
