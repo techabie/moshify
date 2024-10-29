@@ -492,3 +492,36 @@ because we only need the basic structure. we can always change it when we implem
     margin-left: 2rem;
   }
 }
+/* Collapsible */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3rem;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  /* to get the transition looks smoother, use opacity */
+  opacity: 0;
+  /* all mean max-height and opacity, we want those props to have nice transition */
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+.collapsible--expanded .collapsible__content {
+  /* use max-height instead of height because we want the content stretch to fill 
+  viewport according to its size, not taking up all viewport.  */
+  max-height: 100vh;
+  opacity: 1;
+}
