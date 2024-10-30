@@ -567,3 +567,64 @@ because we want the black background to stretch but not the content
   max-width: 1140px;
   margin: 0 auto;
 }
+
+/* Navigation Bar */
+.nav {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap and the .nav__list width:100% will make
+  the list appear on the second row of the flex container. */
+  flex-wrap: wrap;
+  padding: 1rem;
+  align-items: center;
+}
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+.nav__item {
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+  transition: color 0.3s;
+}
+
+.nav__item > a {
+  color: #d2d0db;
+}
+.nav__item > a:hover {
+  color: #fff;
+}
+.nav__toggler {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+.nav__brand {
+  /* something about the design of the logo.svg, its bottom has extra space.
+  To fix   */
+  transform: translateY(5px);
+}
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+  .nav__list {
+    /* to have the list vibible on load, we need to set max-height and opacity. 
+    this is to offset the styling of the .collapsible__content */
+    max-height: 100%;
+    opacity: 1;
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+  }
+  .nav__item {
+    border: 0;
+  }
+}
