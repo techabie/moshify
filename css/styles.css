@@ -190,7 +190,12 @@ a {
 
   line-height: 1.15; /*without this, the <a> inherit line height of 1.5 from normalize.css*/
 }
-
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
 .btn--primary {
   color: #fff;
   background-color: var(--color-primary);
@@ -264,7 +269,7 @@ a {
   border: 0;
   /* the flex-grow would make the input take the most part */
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 .input-group .btn {
   margin: 4px;
@@ -652,5 +657,33 @@ because we want the black background to stretch but not the content
     /*we have grid container box, to get the hero content aligned in the center of the Y-axis,
     use align-self */
     align-self: center;
+  }
+}
+
+/* Domain Block */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 6rem is for the height of each row */
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    /* use auto-fit to let browser decide the no. of column needed when we add
+    extra list items in future. Use repeat(auto-fit, 1fr) doesn't change anything.
+    use minmax(100px,1fr) to let browser decide if there is extra space it will fit more
+    columns but still make sure the min-width of 100px  */
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
