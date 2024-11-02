@@ -219,6 +219,14 @@ a {
 .btn--accent:hover {
   background: #fd5227;
 }
+.btn--dark {
+  background: var(--color-headings);
+  color: #fff;
+}
+.btn--dark:hover {
+  background: #260b82;
+}
+
 /* 1/ to make button and <a> fill the width of its container, use width: 100%.
       2/ <a> is an inline element, but width and height prop doesn't have affect to an inline element=> 
         to fix that change to inline-block  */
@@ -290,11 +298,14 @@ a {
 .card__body {
   padding: 2rem 3rem;
 }
-.card--primary {
+.card--primary .card__header {
   background: var(--color-primary);
   color: white;
 }
-.card--secondary {
+.card--primary .badge--primary {
+  background: #126de4;
+}
+.card--secondary .card__header {
   background: var(--color-secondary);
   color: white;
 }
@@ -309,6 +320,10 @@ from missing the right side  */
 }
 
 /* Plan */
+
+.plan {
+  transition: transform 0.2s ease-out;
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -336,6 +351,9 @@ from missing the right side  */
   letter-spacing: 1px;
   font-weight: 500;
 }
+.plan--popular {
+  transform: scale(1.1);
+}
 .plan--popular .card__header {
   position: relative;
 }
@@ -346,6 +364,12 @@ from missing the right side  */
   position: absolute;
   top: -6px;
   right: 5%;
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -435,6 +459,11 @@ because we only need the basic structure. we can always change it when we implem
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -685,5 +714,15 @@ because we want the black background to stretch but not the content
     use minmax(100px,1fr) to let browser decide if there is extra space it will fit more
     columns but still make sure the min-width of 100px  */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+/* Plans Block */
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+@media screen and (min-width: 768px) {
+  .block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
