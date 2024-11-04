@@ -186,7 +186,7 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   /* to get <a> have center aligned text like button */
   text-align: center;
   text-transform: uppercase;
@@ -283,6 +283,7 @@ a {
   /* the flex-grow would make the input take the most part */
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 .input-group .btn {
   margin: 4px;
@@ -709,8 +710,9 @@ because we want the black background to stretch but not the content
   max-width: 670px;
 }
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   /* 6rem is for the height of each row */
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
