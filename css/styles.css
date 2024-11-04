@@ -576,6 +576,7 @@ because we only need the basic structure. we can always change it when we implem
 }
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 .block__heading {
   margin-top: 0;
