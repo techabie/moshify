@@ -114,7 +114,7 @@ a {
 }
 .badge--small {
   font-size: 1.6rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
 }
 @media screen and (min-width: 1024px) {
   .badge {
@@ -377,6 +377,12 @@ from missing the right side  */
 .plan--popular:hover {
   transform: scale(1.15);
 }
+.plan__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+}
 
 @media screen and (min-width: 1024px) {
   .plan__name {
@@ -391,8 +397,15 @@ from missing the right side  */
   .plan__description {
     font-size: 1.7rem;
   }
+  .plan--popular .plan__billing-cycle {
+    margin-right: 0;
+  }
 }
-
+@media screen and (min-width: 1440px) {
+  .plan--popular .plan__billing-cycle {
+    margin-right: 1rem;
+  }
+}
 /* Media  */
 
 .media {
