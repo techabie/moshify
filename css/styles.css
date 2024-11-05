@@ -611,12 +611,12 @@ because we only need the basic structure. we can always change it when we implem
 }
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 97%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 97%, 0% 100%);
 }
 
 /* this class can be reuse anywhere in webpage. 
@@ -629,6 +629,17 @@ because we want the black background to stretch but not the content
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .block--skewed-right {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  }
+
+  .block--skewed-left {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  }
 }
 
 /* Navigation Bar */
@@ -776,6 +787,9 @@ because we want the black background to stretch but not the content
 }
 
 /* Showcase Block  */
+.block-showcase .container {
+  margin: 0 1.5rem;
+}
 
 .block-showcase__image > img {
   /* to make img responsive in small screen */
@@ -793,7 +807,7 @@ because we want the black background to stretch but not the content
     grid-template-columns: 50% 50%;
   }
   .block-showcase__image {
-    /* we want the content of each grid box to align at on the right end so that we can't see
+    /* we want the imange to align at on the right end so that we can't see
     the left part of the img on screen that aren't wide enough */
     justify-self: end;
   }
@@ -802,6 +816,9 @@ because we want the black background to stretch but not the content
     width: auto;
     /* we want to keep the width to be 700px max, not  larger */
     max-width: 700px;
+  }
+  .block-showcase__list {
+    margin-left: 4rem;
   }
 }
 
