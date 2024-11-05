@@ -428,11 +428,12 @@ because we only need the basic structure. we can always change it when we implem
 
 /* Quotes */
 .quote {
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: italic;
   color: var(--color-body-darker);
   font-weight: 500;
   line-height: 1.3;
+  margin-inline: 10px;
 }
 .quote__text::before {
   content: open-quote;
@@ -442,7 +443,7 @@ because we only need the basic structure. we can always change it when we implem
 }
 
 .quote__author {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 500;
   font-style: normal;
   margin-bottom: 0;
@@ -460,6 +461,17 @@ because we only need the basic structure. we can always change it when we implem
   bottom: 10px;
 }
 
+@media screen and (min-width: 600px) {
+  .quote {
+    font-size: 3rem;
+  }
+  .quote__author {
+    font-size: 3rem;
+  }
+  .quote__organization {
+    font-size: 2.5rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   .quote {
     font-size: 2.4rem;
@@ -611,12 +623,12 @@ because we only need the basic structure. we can always change it when we implem
 }
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 97%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 96%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 97%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%);
 }
 
 /* this class can be reuse anywhere in webpage. 
