@@ -8,6 +8,7 @@
   --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
+  --color-off-black: #232323;
 }
 /* must set the universal selector, before, after pseudo element, to select all elements
 to have border-box, without this, the width that set to 100% of the <a> button would fill more its container.
@@ -254,9 +255,14 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 378px) {
+  .btn {
+    padding: 1.5rem 2.5rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   .btn {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -505,6 +511,7 @@ because we only need the basic structure. we can always change it when we implem
 }
 
 /* Testimonials */
+
 .testimonial {
   padding: 3rem;
 }
@@ -533,7 +540,7 @@ because we only need the basic structure. we can always change it when we implem
 /* Callouts */
 .callout {
   padding: 4rem;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .callout--primary {
   background: var(--color-primary);
@@ -542,7 +549,7 @@ because we only need the basic structure. we can always change it when we implem
 .callout__heading {
   color: #fff;
   margin-top: 0;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .callout .btn {
   justify-self: center;
@@ -836,7 +843,7 @@ because we want the black background to stretch but not the content
 
 /* Footer */
 .footer {
-  background: #232323;
+  background: var(--color-off-black);
 }
 .footer__section {
   padding: 2rem;
@@ -846,8 +853,12 @@ because we want the black background to stretch but not the content
   margin: 0;
 }
 .footer__heading {
+  font-size: 3rem;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
+}
+.footer li {
+  font-size: 2.4rem;
 }
 .footer__brand {
   margin-top: 5rem;
@@ -864,6 +875,13 @@ because we want the black background to stretch but not the content
   color: #fff;
   opacity: 0.3;
 }
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+.footer a:hover {
+  color: #fff;
+}
 
 @media screen and (min-width: 768px) {
   .footer__sections {
@@ -878,19 +896,43 @@ because we want the black background to stretch but not the content
   }
   .footer__brand {
     order: -1;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
+
   .footer__section {
     border-bottom: none;
   }
   .footer__heading {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
-  .footer a {
-    color: #777;
-    transition: color 0.3s;
+  .footer li {
+    font-size: 1.5rem;
   }
-  .footer a:hover {
-    color: #fff;
+}
+
+/* Callout-Block */
+.callout-block {
+  background: linear-gradient(to bottom, #fff 50%, #232323 50%);
+}
+.callout-block .callout {
+  margin: 0 2rem;
+}
+.callout-block .callout__heading {
+  font-size: 2rem;
+}
+.callout-block p {
+  font-size: 2rem;
+}
+@media screen and (min-width: 500px) {
+  .callout-block .callout__heading {
+    font-size: 4rem;
+  }
+  .callout-block p {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .callout-block .callout {
+    margin: 0 6rem;
   }
 }
