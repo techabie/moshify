@@ -257,7 +257,7 @@ a {
 
 @media screen and (max-width: 378px) {
   .btn {
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 2.2rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -918,10 +918,10 @@ because we want the black background to stretch but not the content
   margin: 0 2rem;
 }
 .callout-block .callout__heading {
-  font-size: 2rem;
+  font-size: 3.2rem;
 }
 .callout-block p {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 @media screen and (min-width: 500px) {
   .callout-block .callout__heading {
