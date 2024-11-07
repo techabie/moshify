@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -33,13 +34,13 @@
     <section class="block block--dark block--skewed-left hero">
       <div class="container grid grid--1x2">
         <header class="block__header hero__content">
-          <h1 class="block__heading">Cloud Hosting for Pros</h1>
+          <h1 class="block__heading" data-aos="zoom-in-up">Cloud Hosting for Pros</h1>
           <p class="hero__tagline">
             Deploy your websites in less than 60 seconds.
           </p>
           <a href="#" class="btn btn--accent btn--stretched">Get started</a>
         </header>
-        <picture>
+        <picture data-aos="zoom-in-up">
           <source
             type="image/webp"
             srcset="images/banner.webp 1x, images/banner@2x.webp 2x" />
@@ -52,39 +53,39 @@
     </section>
 
     <section class="block container block-domain">
-      <header class="block__header">
-        <h2>Staring at $9 per month</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eum
-          impedit explicabo et voluptatibus quia, similique cumque rem iusto
-          optio?
-        </p>
-      </header>
-      <div class="input-group">
-        <input
-          type="text"
-          class="input"
-          placeholder="Enter domain name here..."
-        />
-        <button class="btn btn--accent">
-          <svg class="icon icon--primary icon--white">
-            <use xlink:href="images/sprite.svg#search"></use>
-          </svg>
-          Search
-        </button>
+        <header class="block__header" data-aos="fade-up">
+          <h2>Staring at $9 per month</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eum
+            impedit explicabo et voluptatibus quia, similique cumque rem iusto
+            optio?
+          </p>
+        </header>
+        <div class="input-group">
+          <input
+            type="text"
+            class="input"
+            placeholder="Enter domain name here..."
+          />
+          <button class="btn btn--accent">
+            <svg class="icon icon--primary icon--white">
+              <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+            Search
+          </button>
+        </div>
+        <ul class="list block-domain__prices">
+          <li><span class="badge badge--secondary">.com $9</span></li>
+          <li>.sg $10</li>
+          <li>.space $11</li>
+          <li>.info $14</li>
+          <li>.net $10</li>
+          <li>.xyz $10</li>
+        </ul>
       </div>
-
-      <ul class="list block-domain__prices">
-        <li><span class="badge badge--secondary">.com $9</span></li>
-        <li>.sg $10</li>
-        <li>.space $11</li>
-        <li>.info $14</li>
-        <li>.net $10</li>
-        <li>.xyz $10</li>
-      </ul>
     </section>
     <section class="block container block-plans">
-      <div class="grid grid--1x3">
+      <div class="grid grid--1x3" data-aos="fade-up">
       <div class="plan">
         <div class="card card--secondary plan__card">
           <header class="card__header ">
@@ -157,7 +158,7 @@
       </div>
     </section>
     <section class="block container">
-      <header class="block__header">
+      <header class="block__header" data-aos="fade-right">
         <h2>Host on the Cloud to Keep Growing</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos pariatur
@@ -165,7 +166,7 @@
         </p>
       </header>
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-right">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#easy"></use>
@@ -179,7 +180,7 @@
           </p>
           <a href="#" class="link-arrow">Learn More</a>
         </div>
-        <picture>
+        <picture data-aos="fade-left">
           <source
             type="image/webp"
             srcset="images/easy.webp 1x, images/easy@2x.webp 2x"
@@ -193,7 +194,7 @@
       </article>
     
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-left">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#computer"></use>
@@ -207,7 +208,7 @@
           </p>
           <a href="#" class="link-arrow">Learn More</a>
         </div>
-        <picture>
+        <picture data-aos="fade-right">
           <source
             type="image/webp"
             srcset="images/fast.webp 1x, images/fast@2x.webp 2x"
@@ -221,7 +222,7 @@
       </article>
     
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-right">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#settings"></use>
@@ -235,7 +236,7 @@
           </p>
           <a href="#" class="link-arrow">Learn More</a>
         </div>
-        <picture>
+        <picture data-aos="fade-left">
           <source
             type="image/webp"
             srcset="images/wordpress.webp 1x, images/wordpress@2x.webp 2x"
@@ -249,7 +250,7 @@
       </article>
     
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-left">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#clock"></use>
@@ -263,7 +264,7 @@
           </p>
           <a href="#" class="link-arrow">Learn More</a>
         </div>
-        <picture>
+        <picture data-aos="fade-right">
           <source
             type="image/webp"
             srcset="images/support.webp 1x, images/support@2x.webp 2x"
@@ -277,11 +278,11 @@
       </article>
     </section>
     <section class="block block--dark block--skewed-right block-showcase">
-      <header class="block__header">
+      <header class="block__header" data-aos="fade-up">
         <h2>User-friendly Control Panel</h2>
       </header>
       <div class="container grid grid--1x2">
-        <picture class="block-showcase__image">
+        <picture class="block-showcase__image" data-aos="zoom-in-up">
           <source
             type="image/webp"
             srcset="images/ipad.webp 1x, images/ipad@2x.webp 2x"
@@ -292,7 +293,7 @@
           />
           <img src="images/ipad.png" alt="" />
         </picture>
-        <ul class="list block-showcase__list">
+        <ul class="list block-showcase__list" data-aos="zoom-in-up">
           <li>
             <div class="media">
               <div class="media__image">
@@ -350,7 +351,7 @@
       </div>
     </section>
     <section class="block ">
-      <header class="block__header">
+      <header class="block__header" data-aos="fade-up">
         <h2>What our Customer are Saying</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, velit
@@ -360,7 +361,7 @@
       <div class="container">
         <div class="card testimonial card--testimonial">
           <div class="grid grid--1x2">
-            <div class="testimonial__image">
+            <div class="testimonial__image" data-aos="fade-right">
               <img src="images/testimonial.jpg" alt="A happy, smiling" />
               <span class="icon-container icon-container--accent">
                 <svg class="icon icon--white icon--small">
@@ -368,7 +369,7 @@
                 </svg>
               </span>
             </div>
-            <blockquote class="quote">
+            <blockquote class="quote" data-aos="fade-left">
               <p class="quote__text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
                 debitis quidem aspernatur tempora. Ex veniam, tenetur eius nostrum
@@ -382,7 +383,7 @@
                     </svg>
                   </div>
                   <div class="media__body">
-                    <h3 class="media__title quote__author">Uzumaki Naruto</h3>
+                    <h3 class="media__title quote__author">Jim Harris</h3>
                     <p class="quote__organization">Leaf Ninja Corp</p>
                   </div>
                 </div>
@@ -394,8 +395,8 @@
       
     </section>
     <section class="callout-block">
-      <div class="block container ">
-        <div class="callout callout--primary">
+      <div class="block container">
+        <div class="callout callout--primary" data-aos="slide-up">
           <div class="grid grid--1x2">
             <div class="callout__content">
               <h2 class="callout__heading">Ready to Get Started?</h2>
@@ -411,7 +412,7 @@
       </div>
     </section>
     <footer class="block block--dark footer">
-      <div class="container grid footer__sections">
+      <div class="container grid footer__sections" >
         <section class="collapsible collapsible--expanded footer__section">
           <header class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">Products</h2>
@@ -486,10 +487,11 @@
         </section>
       </div>
     </footer>
-  
-
-    
 
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
