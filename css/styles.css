@@ -863,6 +863,7 @@ because we want the black background to stretch but not the content
 }
 .footer li {
   font-size: 2.4rem;
+  padding: 0.5rem 0;
 }
 .footer__brand {
   margin-top: 5rem;
@@ -907,10 +908,10 @@ because we want the black background to stretch but not the content
     border-bottom: none;
   }
   .footer__heading {
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
   .footer li {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
