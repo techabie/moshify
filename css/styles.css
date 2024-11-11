@@ -913,6 +913,9 @@ because we want the black background to stretch but not the content
   .footer li {
     font-size: 2rem;
   }
+  .footer a {
+    padding: inherit;
+  }
 }
 
 /* Callout-Block */
